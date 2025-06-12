@@ -1,8 +1,0 @@
-book_filename: "bookdown-start"
-repo: https://github.com/rachtorr/efi_bookdown_template
-output_dir: docs
-rmd_files: ["index.Rmd", "contact.Rmd", "software.Rmd", "water_qual.Rmd", "EJ_mods.Rmd"]
-css: style.css
-clean: [packages.bib, bookdown.bbl]
-new_session: yes
-
