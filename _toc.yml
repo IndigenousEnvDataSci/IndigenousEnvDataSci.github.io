@@ -31,3 +31,10 @@ parts:
           - file: MOD2/Mod2_pt2
           - file: MOD2/Mod2_pt3
           - file: MOD2/Mod2_pt4
+  - caption: "Water Quality and Traditional Ecological Knowledge"
+    chapters:
+      - file: KAVI/kavi_code_intro.md
+        title: "Introduction to K'avi code"
+        sections:
+          - file: KAVI/Kavi_pt1
+          - file: KAVI/Kavi_pt2

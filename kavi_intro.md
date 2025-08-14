@@ -2,7 +2,7 @@
 
 ## Background Info 
 
-The EPA is the single biggest funder of tribal water quality programs and that tribes often hire consultants because they do not have staff trained in data analysis.  As a result, funds that should stay on the Reservation often flow outward and at greatly inflated costs. This workshop us based on a course at Salish-Kootenai College (SKC), developed by Georgia Smies, and aims to bridge the gap to train students in data analysis. Georgia wrote the background included here. 
+The EPA is the single biggest funder of tribal water quality programs and that tribes often hire consultants because they do not have staff trained in data analysis.  As a result, funds that should stay on the Reservation often flow outward and at greatly inflated costs. These modules are based on a course at Salish-Kootenai College (SKC), developed by Georgia Smies, and aims to bridge the gap to train students in data analysis. Georgia wrote the background included here. 
 
 **EPA Reporting Requirements**
 
@@ -18,25 +18,8 @@ Further, tribes do not have a tool(s) that allows them to evaluate their surface
 
 ## About the data 
 
-This activity is based on a fictional tribe called the K'avi. I needed the tribe to be fictional because I did not want to focus on any indigenous groups that I teach. The location is also fictional, but representative of a place with ample surface water, a high elevation stream network fed by glaciers with wetlands and a lake. Data is similar to data that has been collected in Western Montana, but for the purpose of these activities, we use 'dummy' data created for these modules. 
+The modules on this site are based on a fictional tribe called the K'avi. We needed the tribe to be fictional because we did not want to focus on any singular indigenous groups. The location is also fictional, but representative of a place with ample surface water, a high elevation stream network fed by glaciers with wetlands and a lake. Data is similar to data that has been collected in Western Montana, but for the purpose of these activities, we use 'dummy' data created for these modules. 
 
 ## Acknowledgements 
 
-This activity was first created by Georgia Smies at Salish-Kootenai College, and developed by Helena S. Kleiner at University of Notre Dame. It was later modified by Cazimir Kowalski, also from University of Notre Dame. The text for setting up R studio was adopted from the [MacrosystemsEDDIE Teaching Materials](https://macrosystemseddie.github.io/module1) in 'R You Ready for EDDIE? Module 1'. This work is part of an ongoing project to develop Indigenous data science educational tools with the [Ecological Forecasting Initiative](https://ecoforecast.org/).
-
-## Citations
-
-You can also cite references that are stored in a `bibtex` file. For example,
-the following syntax: `` {cite}`holdgraf_evidence_2014` `` will render like
-this: {cite}`holdgraf_evidence_2014`.
-
-Moreover, you can insert a bibliography into your page with this syntax:
-The `{bibliography}` directive must be used for all the `{cite}` roles to
-render properly.
-For example, if the references for your book are stored in `references.bib`,
-then the bibliography is inserted with:
-
-```{bibliography}
-```
-
-
+This activity was first created by Georgia Smies at Salish-Kootenai College, and developed in collaboration by graduate students at University of Notre Dame. 
