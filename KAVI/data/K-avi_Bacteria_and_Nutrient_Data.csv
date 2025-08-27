@@ -1,4 +1,4 @@
-,sample_location,longitude,latitude,date,E coli col/100 mL,Total Coliform col/100 mL,Nitrates mg/L,mg/L,Turbidity ntu
+,sample_location,longitude,latitude,date,E coli col/100 mL,Total Coliform col/100 mL,Nitrates mg/L,Phos mg/L,Turbidity ntu
 1,Monitoring Site 1,51.47.40 N,117.25.31 W,1/15/90,,,,,
 2,Monitoring Site 1,51.47.40 N,117.25.31 W,2/1/90,,,,,
 3,Monitoring Site 1,51.47.40 N,117.25.31 W,3/15/90,,,,,
