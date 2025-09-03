@@ -38,3 +38,5 @@ parts:
         sections:
           - file: KAVI/Kavi_pt1
           - file: KAVI/Kavi_pt2
+          - file: KAVI/Kavi_pt3
+          - file: KAVI/Kavi_pt4
