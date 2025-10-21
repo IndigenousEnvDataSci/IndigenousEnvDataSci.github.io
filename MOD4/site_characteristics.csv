@@ -1,0 +1,5 @@
+site id,soil_type,elevation_m,slope_%,aspect,avg_ann_precip,avg_ann_temp C
+1,,2000,10,SW,40,12
+2,silt loam,1500,15,NE,NA,10
+3,gravel,2200,20,S,20,10
+4,sand loam,1600,65,NA,65,7
