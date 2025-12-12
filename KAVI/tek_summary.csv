@@ -1,0 +1,6 @@
+"","site","sample_location","mean_tek","sd","n","se_tek"
+"1","Ceremony.Site","Monitoring Site 1",2,0,4,0
+"2","Fishing.Site","Monitoring Site 4",4.5,1,4,0.5
+"3","Hunting.Grounds","Monitoring Site 3",2.25,1.5,4,0.75
+"4","Language.Camp","Monitoring Site 5",2.5,1.73205080756888,4,0.866025403784439
+"5","Medicinal.Food.Site","Monitoring Site 2",3.75,0.957427107756338,4,0.478713553878169
