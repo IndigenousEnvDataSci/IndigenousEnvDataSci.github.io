@@ -38,7 +38,6 @@ parts:
           - file: MOD3/Mod3_pt2
           - file: MOD3/Mod3_pt3
           - file: MOD3/Mod3_pt4
-          - file: MOD3/Mod3_pt5
       - file: MOD4/Mod4_intro
         title: "Module 4: Visualizing forest growth for management"
         sections:
