@@ -27,28 +27,78 @@ jobs:
       id-token: write
 
     steps:
-      - uses: actions/checkout@v4
-      # insert this before steps that run pip install / actions/setup-python / R package installs
-    
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            build-essential \
-            pkg-config \
-            libcurl4-openssl-dev \
-            libssl-dev \
-            libxml2-dev \
-            libfontconfig1-dev \
-            libfreetype6-dev
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Show runner info & repo
+      - name: Runner & repo info
         run: |
           echo "USER: $(whoami)"
           echo "PWD: $(pwd)"
           echo "GIT REF: $GITHUB_REF"
           echo "GITHUB_SHA: $GITHUB_SHA"
+          echo "Top-level listing:"
           ls -la
+
+      - name: Show repo tree (depth 4)
+        run: |
+          echo "Repository tree (depth 4):"
+          find . -maxdepth 4 -print -exec ls -ld {} \; || true
+
+      - name: Check _toc.yml file entries (detect directories/missing files)
+        run: |
+          python -m pip install pyyaml
+          python - <<'PY'
+import os, sys, yaml, subprocess
+toc = "_toc.yml"
+if not os.path.exists(toc):
+    print("_toc.yml not found in repo root")
+    sys.exit(0)
+data = yaml.safe_load(open(toc, encoding="utf-8"))
+def collect(node):
+    res=[]
+    if isinstance(node, dict):
+        for k,v in node.items():
+            if k=="file" and isinstance(v,str):
+                res.append(v)
+            else:
+                res += collect(v)
+    elif isinstance(node, list):
+        for item in node:
+            res += collect(item)
+    return res
+files = collect(data)
+if not files:
+    print("No 'file' entries found in _toc.yml")
+    sys.exit(0)
+problems = []
+print("Checking file entries from _toc.yml:")
+for f in files:
+    orig = f
+    f = f.strip().strip('"').strip("'")
+    candidates = [f, f+".md", f+".ipynb", os.path.join(f,"index.md"), os.path.join(f,"README.md")]
+    found=False
+    for c in candidates:
+        if os.path.exists(c):
+            kind = "dir" if os.path.isdir(c) else "file"
+            print(f"  {orig} -> {c} ({kind})")
+            if os.path.isdir(c):
+                problems.append((orig, c, "directory"))
+            found=True
+            break
+    if not found:
+        print(f"  {orig} -> MISSING (tried: {', '.join(candidates)})")
+        problems.append((orig, None, "missing"))
+if problems:
+    print("\nProblems detected with _toc.yml entries:")
+    for orig, actual, kind in problems:
+        if kind=="missing":
+            print(f" - {orig} -> MISSING")
+        else:
+            print(f" - {orig} -> directory at {actual}")
+    print("\nTip: For a folder-based chapter, reference the index file explicitly (e.g. 'MOD1/Mod1_pt1/index' or ensure index.md exists). Also check filename case.")
+    sys.exit(2)
+print("\nAll TOC file entries resolve to files (no directories detected).")
+PY
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -56,15 +106,12 @@ jobs:
           python-version: '3.11'
           cache: pip
 
-      - name: Print environment (sorted)
-        run: env | sort
-
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           set -x
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          # ensure jupyter-book present (safe to run even if in requirements)
+          # ensure jupyter-book and common plugins are available for the runner
           pip install jupyter-book sphinx myst-parser || true
 
       - name: Show versions
@@ -72,35 +119,34 @@ jobs:
           python --version
           pip --version
           jupyter-book --version || true
-          python -c "import sphinx; print('sphinx', getattr(sphinx,'__version__','unknown'))"
+          python -c "import sphinx, sys; print('sphinx', getattr(sphinx,'__version__','unknown'))"
 
-      - name: Set up R
+      - name: Set up R (if needed for notebooks with R)
         uses: r-lib/actions/setup-r@v2
 
-      - name: Install IRkernel
+      - name: Install IRkernel (if you use R notebooks)
         run: |
           set -x
-          R -e 'install.packages("IRkernel", repos="https://cloud.r-project.org")'
-          R -e 'install.packages("tidyverse", dependencies = TRUE, repos="https://cloud.r-project.org")'
-          R -e 'IRkernel::installspec()'
+          R -e 'install.packages("IRkernel", repos="https://cloud.r-project.org")' || true
+          R -e 'install.packages("tidyverse", dependencies = TRUE, repos="https://cloud.r-project.org")' || true
+          R -e 'IRkernel::installspec()' || true
 
-      - name: cache executed notebooks
+      - name: (Optional) Cache executed notebooks
         uses: actions/cache@v4
         with:
           path: _build/.jupyter_cache
           key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
       - name: Build the book (verbose, save log)
-        # If your book sources are in a subfolder, uncomment and set working-directory:
-        # working-directory: docs
+        # If your book sources live in a subdirectory (e.g. docs/), set working-directory: docs
         run: |
-          set -x
-          # run build and save stdout/stderr to build.log
+          set -o pipefail
+          echo "Running jupyter-book build ..."
           jupyter-book build . 2>&1 | tee build.log
           rc=${PIPESTATUS[0]}
           echo "jupyter-book exit code: $rc"
           if [ "$rc" -ne 0 ]; then
-            echo "BUILD FAILED: dumping last 400 lines of build.log"
+            echo "BUILD FAILED: showing last 400 lines of build.log"
             tail -n 400 build.log || true
             exit $rc
           fi
@@ -112,7 +158,7 @@ jobs:
           echo "Looking for any _build/html directories (maxdepth 6):"
           find . -type d -name "_build" -maxdepth 6 -print -exec sh -c 'echo "Contents of $0/html:"; ls -la "$0/html" || true' {} \; || true
 
-      - name: Save build.log as artifact
+      - name: Upload build.log artifact
         uses: actions/upload-artifact@v4
         with:
           name: jupyter-book-build-log
@@ -124,7 +170,7 @@ jobs:
           TARGET="_build/html"
           if [ -d "$TARGET" ]; then
             echo "exists=true" >> $GITHUB_OUTPUT
-            echo "$TARGET found"
+            echo "Found $TARGET"
           else
             echo "exists=false" >> $GITHUB_OUTPUT
             echo "$TARGET not found"
@@ -136,12 +182,12 @@ jobs:
         with:
           path: "_build/html"
 
-      - name: Fail early with helpful message (if no build output)
+      - name: Fail with helpful message (if no build output)
         if: steps.check_build.outputs.exists == 'false'
         run: |
-          echo "ERROR: _build/html not found. See the build log artifact and 'Show produced files' step output for diagnostics."
-          echo "Printing repository tree (depth 3):"
-          find . -maxdepth 3 -print -exec ls -la {} \; || true
+          echo "ERROR: _build/html not found. See the jupyter-book-build-log artifact and the 'Show produced files' step output for diagnostics."
+          echo "Printing repository tree (depth 4):"
+          find . -maxdepth 4 -print -exec ls -la {} \; || true
           exit 1
 
       - name: Deploy to GitHub Pages
