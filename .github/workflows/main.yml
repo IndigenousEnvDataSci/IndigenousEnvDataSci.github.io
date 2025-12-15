@@ -37,6 +37,15 @@ jobs:
       id-token: write
     steps:
     - uses: actions/checkout@v4
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          libcurl4-openssl-dev \
+          libfreetype6-dev \
+          libfontconfig1-dev \
+          pkg-config
   
     # Install dependencies
     - name: Set up Python 3.11
