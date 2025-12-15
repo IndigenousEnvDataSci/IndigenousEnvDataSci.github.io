@@ -145,4 +145,52 @@ PY
           jupyter-book build . 2>&1 | tee build.log
           rc=${PIPESTATUS[0]}
           echo "jupyter-book exit code: $rc"
-          if
+          if [ "$rc" -ne 0 ]; then
+            echo "BUILD FAILED: showing last 400 lines of build.log"
+            tail -n 400 build.log || true
+            exit $rc
+          fi
+
+      - name: Show produced files & find html output
+        run: |
+          echo "Top-level listing:"
+          ls -la
+          echo "Looking for any _build/html directories (maxdepth 6):"
+          find . -type d -name "_build" -maxdepth 6 -print -exec sh -c 'echo "Contents of $0/html:"; ls -la "$0/html" || true' {} \; || true
+
+      - name: Upload build.log artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jupyter-book-build-log
+          path: build.log
+
+      - name: Check build output exists
+        id: check_build
+        run: |
+          TARGET="_build/html"
+          if [ -d "$TARGET" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Found $TARGET"
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "$TARGET not found"
+          fi
+
+      - name: Upload artifact (only if build output exists)
+        if: steps.check_build.outputs.exists == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_build/html"
+
+      - name: Fail with helpful message (if no build output)
+        if: steps.check_build.outputs.exists == 'false'
+        run: |
+          echo "ERROR: _build/html not found. See the jupyter-book-build-log artifact and the 'Show produced files' step output for diagnostics."
+          echo "Printing repository tree (depth 4):"
+          find . -maxdepth 4 -print -exec ls -la {} \; || true
+          exit 1
+
+      - name: Deploy to GitHub Pages
+        if: steps.check_build.outputs.exists == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
