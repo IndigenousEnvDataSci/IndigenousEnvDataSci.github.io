@@ -64,6 +64,7 @@ jobs:
     - name: Install IRkernel
       run: |
         R -e 'install.packages("IRkernel")'
+        R -e 'install.packages("textshaping", dependencies=TRUE)'
         R -e 'install.packages("tidyverse", dependencies = TRUE)'
         R -e 'IRkernel::installspec()'
         
