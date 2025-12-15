@@ -28,6 +28,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      # insert this before steps that run pip install / actions/setup-python / R package installs
+    
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential \
+            pkg-config \
+            libcurl4-openssl-dev \
+            libssl-dev \
+            libxml2-dev \
+            libfontconfig1-dev \
+            libfreetype6-dev
 
       - name: Show runner info & repo
         run: |
