@@ -42,13 +42,4 @@ parts:
         title: "Module 4: Visualizing forest growth for management"
         sections:
           - file: MOD4/Mod4_pt1
-          - file: MOD4/Mod4_pt2 
-  - caption: "Workshops"
-    chapters: 
-      - file: KAVI/kavi_code_intro
-        title: "Water Quality and TEK Module"
-        sections:
-          - file: KAVI/Kavi_pt1
-          - file: KAVI/Kavi_pt2
-          - file: KAVI/Kavi_pt3
-          - file: KAVI/Kavi_pt4
+          - file: MOD4/Mod4_pt2
