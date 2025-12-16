@@ -59,10 +59,20 @@ jobs:
         path: _build/.jupyter_cache
         key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
-    # Build the book
+    - name: Debug - Check files
+      run: |
+        echo "=== Current directory ==="
+        pwd
+        echo "=== All files ==="
+        ls -laR
+        echo "=== Checking logo file ==="
+        ls -la images/EFI_Logo_Whitetext_transparent.png || echo "Logo not found"
+        echo "=== File type check ==="
+        file images/EFI_Logo_Whitetext_transparent.png || echo "Cannot check file type"
+        
     - name: Build the book
       run: |
-        jupyter book build .
+        jupyter book build . --verbose
         
     # Upload the book's HTML as an artifact
     - name: Upload artifact
