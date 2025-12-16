@@ -49,6 +49,13 @@ jobs:
       run: |
         Rscript -e "install.packages(c('IRkernel', 'tidyverse'), Ncpus = 2)"
         Rscript -e "IRkernel::installspec(user = FALSE)"
+
+    - name: Verify R kernel installation
+      run: |
+        echo "=== Available Jupyter kernels ==="
+        jupyter kernelspec list
+        echo "=== R kernel location ==="
+        Rscript -e "system('which R')"
     
     # (optional) Cache your executed notebooks between runs
     # if you have config:
