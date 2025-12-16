@@ -6,11 +6,11 @@ root: intro
 parts:
   - caption: Introduction
     chapters:
-      - file: about_us
+      - file: about_us.md
         title: "About us"
-      - file: kavi_intro
-        title: Story of K'avi code 
-      - file: getting_started
+      - file: kavi_intro.md
+        title: "Story of K'avi code" 
+      - file: getting_started.md
         title: "Getting started"
-      - file: instructor_notes
+      - file: instructor_notes.md
         title: "Instructor Notes"
