@@ -60,7 +60,7 @@ jobs:
     
     - name: Install R packages
       run: |
-        R -e 'install.packages(c("IRkernel", "ggplot2", "dplyr", "readr"))'
+        R -e 'install.packages(c("IRkernel", "tidyverse"))'
         R -e 'IRkernel::installspec()'
 
     - name: Test R kernel
@@ -75,11 +75,36 @@ jobs:
       with:
         path: _build/.jupyter_cache
         key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
-    
-    # Build the book
-    - name: Build the book
+   
+    - name: Debug file structure
       run: |
-        jupyter-book build .
+        echo "=== Checking for problematic directory references ==="
+        # Check for any directories that might be mistaken for files
+        for dir in */ MOD*/ KAVI/; do
+          if [ -d "$dir" ]; then
+            echo "Directory: $dir"
+            ls -la "$dir" | head -10
+          fi
+        done
+        
+        echo "=== Looking for .ipynb_checkpoints ==="
+        find . -name ".ipynb_checkpoints" -type d -exec rm -rf {} + 2>/dev/null || true
+        
+        echo "=== Looking for empty or problematic notebooks ==="
+        find . -name "*.ipynb" -size 0
+        
+        echo "=== Checking all files referenced in _toc.yml ==="
+        for file in intro about_us kavi_intro getting_started instructor_notes; do
+          ls -lh "$file".* 2>/dev/null || echo "Missing: $file"
+        done
+        
+        for dir in MOD1 MOD2 MOD3 MOD4 KAVI; do
+          echo "--- Files in $dir ---"
+          find "$dir" -name "*.ipynb" -o -name "*.md"
+        done
+
+    -  name: Build the book
+       run: jupyter-book build . -v
     
     # Upload the book's HTML as an artifact
     - name: Upload artifact
