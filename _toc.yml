@@ -31,13 +31,6 @@ parts:
           - file: MOD2/Mod2_pt2
           - file: MOD2/Mod2_pt3
           - file: MOD2/Mod2_pt4
-      - file: MOD3/mod3_intro
-        title: "Module 3: Bison reintroduction and plant biomass"
-        sections:
-          - file: MOD3/Mod3_pt1
-          - file: MOD3/Mod3_pt2
-          - file: MOD3/Mod3_pt3
-          - file: MOD3/Mod3_pt4
       - file: MOD4/Mod4_intro
         title: "Module 4: Visualizing forest growth for management"
         sections:
