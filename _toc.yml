@@ -4,35 +4,13 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Introduction
+  - caption: "Introduction"
     chapters:
-      - file: about_us
+      - file: about_us.md
         title: "About us"
-      - file: kavi_intro
-        title: Story of K'avi code 
-      - file: getting_started
+      - file: kavi_intro.md
+        title: "Story of K'avi code" 
+      - file: getting_started.md
         title: "Getting started"
-      - file: instructor_notes
+      - file: instructor_notes.md
         title: "Instructor Notes"
-  - caption: "Environmental Justice Data Science Modules"
-    chapters:
-      - file: MOD1/mod1_intro
-        title: "Module 1: Monitoring fisheries for heavy metal contaminants"
-        sections:
-          - file: MOD1/Mod1_pt1
-          - file: MOD1/Mod1_pt2
-          - file: MOD1/Mod1_pt3
-          - file: MOD1/Mod1_pt4
-          - file: MOD1/Mod1_pt5
-      - file: MOD2/mod2_intro
-        title: "Module 2: Exploring water quality for bull trout reintroduction"
-        sections:
-          - file: MOD2/Mod2_pt1
-          - file: MOD2/Mod2_pt2
-          - file: MOD2/Mod2_pt3
-          - file: MOD2/Mod2_pt4
-      - file: MOD4/Mod4_intro
-        title: "Module 4: Visualizing forest growth for management"
-        sections:
-          - file: MOD4/Mod4_pt1
-          - file: MOD4/Mod4_pt2
