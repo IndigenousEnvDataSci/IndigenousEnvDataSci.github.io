@@ -35,8 +35,8 @@ jobs:
     - name: Setup R
       uses: r-lib/actions/setup-r@v2
       with:
-        use-public-rspm: true  # Uses binary packages automatically
-
+        use-public-rspm: true
+    
     - name: Cache R packages
       uses: actions/cache@v3
       with:
@@ -44,11 +44,12 @@ jobs:
         key: ${{ runner.os }}-r-${{ hashFiles('**/DESCRIPTION') }}-v1
         restore-keys: |
           ${{ runner.os }}-r-
-  
-    - name: Install R packages
+    
+    - name: Install R packages and register kernel
       run: |
         Rscript -e "install.packages(c('IRkernel', 'tidyverse'), Ncpus = 2)"
-        
+        Rscript -e "IRkernel::installspec(user = FALSE)"
+    
     # (optional) Cache your executed notebooks between runs
     # if you have config:
     # execute:
@@ -58,17 +59,6 @@ jobs:
       with:
         path: _build/.jupyter_cache
         key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
-
-    - name: Debug - Check files
-      run: |
-        echo "=== Current directory ==="
-        pwd
-        echo "=== All files ==="
-        ls -laR
-        echo "=== Checking logo file ==="
-        ls -la images/EFI_Logo_Whitetext_transparent.png || echo "Logo not found"
-        echo "=== File type check ==="
-        file images/EFI_Logo_Whitetext_transparent.png || echo "Cannot check file type"
         
     - name: Clean build
       run: |
