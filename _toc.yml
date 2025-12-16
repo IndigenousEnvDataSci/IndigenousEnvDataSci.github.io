@@ -42,3 +42,7 @@ parts:
         sections:
           - file: MOD4/Mod4_pt1
           - file: MOD4/Mod4_pt2
+  - caption: "Workshops"
+    chapters:
+      - file: KAVI/kavi_code_intro
+        title: "Water Quality and TEK"
