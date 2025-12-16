@@ -70,9 +70,13 @@ jobs:
         echo "=== File type check ==="
         file images/EFI_Logo_Whitetext_transparent.png || echo "Cannot check file type"
         
+    - name: Clean build
+      run: |
+        rm -rf _build
+    
     - name: Build the book
       run: |
-        jupyter book build . --verbose
+        jupyter book build . 
         
     # Upload the book's HTML as an artifact
     - name: Upload artifact
