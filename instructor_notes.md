@@ -29,8 +29,8 @@ At the beginning of each meeting there was instruction and discussion, followed 
 These worksheets were created for students to follow along with either a printed versions or on google doc, to review the steps and answer questions. Clicking the link will open the worksheet in a different page. 
 
 - [Module 1:](./MOD1/mod1_intro.md) Monitoring fisheries for heavy metal contaminants 
-    - [Student Worksheet](https://docs.google.com/document/d/1mc5RC97q03e_-o0kDj9-lmd10HyxH6vFZEjSyd1bm1I/edit?usp=sharing){:target="_blank"} (work in progress)
-    - [Key for Student Worksheet](https://docs.google.com/document/d/1BJuyTysceg3bvHxI8b8ZyJ7Ns6GSJpTikM3_xE1pkz0/edit?usp=sharing){:target="_blank"} (work in progress)
+    - [Student Worksheet](https://docs.google.com/document/d/1mc5RC97q03e_-o0kDj9-lmd10HyxH6vFZEjSyd1bm1I/edit?usp=sharing) (work in progress)
+    - [Key for Student Worksheet](https://docs.google.com/document/d/1BJuyTysceg3bvHxI8b8ZyJ7Ns6GSJpTikM3_xE1pkz0/edit?usp=sharing) (work in progress)
 
 - [Module 2:](./MOD2/mod2_intro.md) Exploring water quality for bull trout reintroduction 
     - [Student Worksheet]() (work in progress, to be added)

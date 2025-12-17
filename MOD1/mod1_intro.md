@@ -49,6 +49,8 @@ at different times, or finding a realtionship between mercury concentration and 
 
 ## Note for instructors: 
 
+This module also comes with a student worksheet, which can be printed or made a copy in google docs: [Module 1: Monitoring Fisheries for Heavy Metal Conaminants](https://docs.google.com/document/d/1mc5RC97q03e_-o0kDj9-lmd10HyxH6vFZEjSyd1bm1I/edit?usp=sharing)
+
 Data used here is 'dummy' data created based on a study that measured and related fish size and mercury concentration ([Somers and Jackson, 1993](https://jackson.eeb.utoronto.ca/files/2012/10/Somers-and-Jackson-1993.pdf)) See the file [fish_data_dummy.R](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Mod1_Fish/fish_data_dummy.R) for more information on how it was created or to make your own adjustments. 
 
 

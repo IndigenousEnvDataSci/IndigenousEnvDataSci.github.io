@@ -13,14 +13,21 @@ Email Dr. Rachel Torres at Rachel.Torres@humboldt.edu
 
 [**Geoscience Alliance**](https://geosciencealliance.org/) is a national alliance of individuals committed to broadening the participation of Native Americans, Alaska Natives, and people of Native Hawai'ian ancestry in the geosciences. Its members are faculty and staff from Tribal Colleges, universities, and research centers; Native elders and community members; industry and corporate representatives; students (K12, undergraduate, and graduate); formal and informal educators; and other interested individuals. 
 
-[**Victoria Thomson**](https://science.osti.gov/wdts/einstein/Fellows-Central/Current-Fellows/Victoria-Thomson), an Albert Einstein Distinguished Educator Fellow with USGS and high school science teacher. 
+[**Native Food, Energy, & Water Systems Certificate**](https://clas.ucdenver.edu/fews/building-pathways-purpose) is a non-credit, continuing and professional education program build through micro-credentials and digital badging. It was developed through the [Native, Food, Energy, and Water Systems (FEWS) Alliance](https://nativefewsalliance.org/).  
+
+[**Sustainable Land and Water Resources Research Experience for Undergraduates**](https://reuslawr.org/the-reu-slawr/) is a community-centered and tribally focused summer program that explores the interactions between physical, natural, and social processes. 
+
+[**Victoria Thomson**](https://science.osti.gov/wdts/einstein/Fellows-Central/Alumni-Fellows/Victoria-Thomson), an Albert Einstein Distinguished Educator Fellow with USGS and high school science teacher. 
 
 **Christine Martin**, PhD Candidate at Montana State University 
-
 
 ---
 
 R for environmental indigenous data science 2024 is licensed under Creative Commons Attribution 4.0 International 
 
 This project is supported by the Alfred P. Sloan Foundation.
-![](images/sloan-logo.png)
+
+```{image} images/sloan-logo.png
+:width: 200px
+```
+
