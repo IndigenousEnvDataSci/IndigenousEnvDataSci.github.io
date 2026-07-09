@@ -76,7 +76,7 @@ After loading `tidyverse` you may receive a message in your console about confli
 
 ![](images/github-repo-screenshot.png)
 
-See our [instructor's demo slides](https://www.canva.com/design/DAGjgAcD7NU/nMGGZvbrTeUeUVP42gQvdQ/view?utm_content=DAGjgAcD7NU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1ffc817fbc) for a step by step tutorial on setting up a project in R with a github repository.
+See our [instructor's demo slides](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Worksheets/Teachers_Guide_Setup_RStudio.pdf) for a step by step tutorial on setting up a project in R with a github repository.
 
 ## References
 
