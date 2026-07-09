@@ -1,11 +1,24 @@
 (instructor-notes-label)=
 # Instructor Notes
 
-These modules are free to use and adapt for your learning and teaching. The scripts and data used are available through [Github](https://github.com/IndigenousEnvDataSci/IndigenousEnvDataSci.github.io) and in this website as notebooks to be opened in Google Colab or Binder. In addition to the code, we have developed worksheets for following along and a slide show for instructors, which you can access here: 
+These modules are free to use and adapt for your learning and teaching. The scripts and data used are available through [Github](https://github.com/IndigenousEnvDataSci/IndigenousEnvDataSci.github.io) and in this website as notebooks to be opened in Google Colab or Binder. All of the modules are written in R, an open source statistical programming language. The primary R package used is [tidyverse](https://tidyverse.org/). The main steps for installation of R, Rstudio, and tidyverse can be found at [Getting Started](getting_started.md).
 
- [Teacher's guide for setting up and running the first module in R studio](https://www.canva.com/design/DAGjgAcD7NU/nMGGZvbrTeUeUVP42gQvdQ/view?utm_content=DAGjgAcD7NU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1ffc817fbc)
+In addition to the code and installation steps, we have developed worksheets for following along and a slide show for instructors, which you can access here: 
 
-If you are an instructor working with this material, we would love to hear from you! Feel free to reach out to Rachel at rdt47@humboldt.edu with any questions.
+ - [Teacher's guide for setting up and running the first module in R studio](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Worksheets/Teachers_Guide_Setup_RStudio.pdf)
+ - [Teacher's guide for running first module in Binder](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Worksheets/Teachers_Guide_Binder.pdf)
+ - [Teacher's guide Module 1](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Worksheets/Teachers_Guide_Mod1.pdf)
+
+If you are an instructor working with this material, we would love to hear from you! Feel free to reach out to Rachel at r_torres[at]berkeley[dot]edu 
+
+## Worksheets 
+
+These worksheets were created for students to follow along during a one day workshop. They were made available as google docs and printed on paper. The worksheets aimed to help students review the steps and answer questions without focusing on the code itself. Clicking the link will open the worksheet in a different page. 
+
+- [Module 0: Download and Install R](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Worksheets/Module%200_%20Download%20%20and%20Install%20R.pdf) 
+- [Module 1:](./MOD1/mod1_intro.md) Monitoring fisheries for heavy metal contaminants 
+    - [Student Worksheet](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Worksheets/Module%201_%20Monitoring%20Fisheries%20for%20Heavy%20Metal%20Contaminants.pdf)
+    - [Key for Student Worksheet](https://docs.google.com/document/d/1BJuyTysceg3bvHxI8b8ZyJ7Ns6GSJpTikM3_xE1pkz0/edit?usp=sharing) (work in progress)
 
 ## More information 
 
@@ -24,14 +37,4 @@ At the beginning of each meeting there was instruction and discussion, followed 
 
 
 
-## Supporting documents for modules 
 
-These worksheets were created for students to follow along with either a printed versions or on google doc, to review the steps and answer questions. Clicking the link will open the worksheet in a different page. 
-
-- [Module 1:](./MOD1/mod1_intro.md) Monitoring fisheries for heavy metal contaminants 
-    - [Student Worksheet](https://docs.google.com/document/d/1mc5RC97q03e_-o0kDj9-lmd10HyxH6vFZEjSyd1bm1I/edit?usp=sharing) (work in progress)
-    - [Key for Student Worksheet](https://docs.google.com/document/d/1BJuyTysceg3bvHxI8b8ZyJ7Ns6GSJpTikM3_xE1pkz0/edit?usp=sharing) (work in progress)
-
-- [Module 2:](./MOD2/mod2_intro.md) Exploring water quality for bull trout reintroduction 
-    - [Student Worksheet]() (work in progress, to be added)
-    - [Key for Student Worksheet]() (work in progress, to be added)

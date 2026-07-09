@@ -49,8 +49,14 @@ at different times, or finding a realtionship between mercury concentration and 
 
 ## Note for instructors: 
 
-This module also comes with a student worksheet, which can be printed or made a copy in google docs: [Module 1: Monitoring Fisheries for Heavy Metal Conaminants](https://docs.google.com/document/d/1mc5RC97q03e_-o0kDj9-lmd10HyxH6vFZEjSyd1bm1I/edit?usp=sharing)
+This module also comes with a student worksheet, which can be printed or made available to students online. [Link to worksheet for Module 1](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Worksheets/Module%201_%20Monitoring%20Fisheries%20for%20Heavy%20Metal%20Contaminants.pdf). 
 
-Data used here is 'dummy' data created based on a study that measured and related fish size and mercury concentration ([Somers and Jackson, 1993](https://jackson.eeb.utoronto.ca/files/2012/10/Somers-and-Jackson-1993.pdf)) See the file [fish_data_dummy.R](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Mod1_Fish/fish_data_dummy.R) for more information on how it was created or to make your own adjustments. 
+Data used here is 'dummy' data created based on a study that measured and related fish size and mercury concentration (Somers and Jackson, 1993).
+See the file [fish_data_dummy.R](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Mod1_Fish/fish_data_dummy.R) for more information on how it was created or to make your own adjustments. 
 
+**References**
+
+Keith M. Somers and Donald A. Jackson. 1993. Adjusting Mercury Concentration for Fish-Size Covariation: A Multivariate Alternative to Bivariate Regression. Canadian Journal of Fisheries and Aquatic Sciences. 50(11): 2388-2396. https://doi.org/10.1139/f93-263
+
+Technical Information on development of FDA/EPA advice about eating fish for those who might become or are pregnant or breastfeeding and children ages 1-11 years | FDA. (2024). https://www.fda.gov/food/environmental-contaminants-food/technical-information-development-fdaepa-advice-about-eating-fish-those-who-might-become-or-are 
 
