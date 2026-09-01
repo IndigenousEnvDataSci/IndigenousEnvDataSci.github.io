@@ -18,34 +18,12 @@ Once they collect these data, the tribal fishery managers will need to present t
 - scatter plots 
 - data visualization with `ggplot`
 
-## Module goals:
-
-1. Explore data related to fish length and heavy metal concentrations.
-
-2. Summarize data relative the safety thresholds of mercury concentrations.
-
-3. Create a graph that could be used to communicate the fishery managers' findings to their community. 
-
 ## Learning goals:
 
-1. Students become more comfortable opening R and loading in data from an 
-external data file. 
-  
-2. Students gain exposure to basic commands to explore their data before 
-they begin to analyze it. 
-
-3. Students gain experience loading in packages (`tidyverse` and `ggplot`). 
-
-4. Students gain exposure to working with different data types (numeric, characters)
-
-5. Students gain exposure to basic summary statistic arguments in R to pull the 
-mean, median, max, and min values for different variables in the dataset. 
-
-6. Students become equipped with how to make a graph in R using `ggplot` 
-with variables pulled from a larger dataset. Can open a discussion point: 
-how do we present data in a way that can help us understand the problem at hand?
-(i.e. in this case, it may be plotting mercury concentrations found in fish 
-at different times, or finding a realtionship between mercury concentration and fish length)
+1. Understand how to interact with data in R, starting with bringing data into the computing environment to explore 
+2. Calculate and interpret the middle values (mean, median) and extreme values (min, max) of a dataset
+3. Create straightforward plots to visualize safety thresholds and communicate results with the community 
+4. Apply both statistics and visuals to determine if local fish are safe for consumption
 
 ## Note for instructors: 
 

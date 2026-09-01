@@ -14,29 +14,12 @@ To reintroduce bison, the land must have enough available sustenance for the bis
 -   Creating new columns with `mutate`
 -   data visualization with `ggplot` : bar plots
 
-## Module goals:
-
-1. Estimate plant biomass per site using quadrat data collected at each site 
-
-2. Compare sites by total plant biomass using visuals and descriptive statistics 
-
-3. Estimate nitrogen availability at each site  
-
-4. Use both plant biomass and nitrogen per site to compare viability for bison herd reintroduction 
-
-5. (optional) consider site viability for bison herd when plant biomass availability is adjusted for elk populations 
-
-
 ## Learning goals: 
 
-1. Review skills learned in previous modules, including loading and previewing data, and grouping and summarizing data.
-
-2. Understand how to use unit conversions to create new columns
-
-3. Create data visualizations to aid in decision making proccess  
-
-4. Compare different sites based on multiple variables, using visuals and descriptive statistics 
-
+1. Learn to combine separate data sources into a single, cohesive dataset
+2. Group data by specific categories (in this case field sites) to summarize and explore side-by-side comparisons
+3. Standardize and convert different units of measurement to make data easier to interpret and compare
+4. Evaluate multiple environmental variables simultaneously for managing decisions on reintroducing native species to their habitats
 
 ## Note for instructors: 
 

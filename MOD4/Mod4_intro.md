@@ -1,4 +1,4 @@
-# Introduction
+# [Module 4: Forest management and communicating data](https://github.com/IndigenousEnvDataSci/EJ-DS/tree/main/Mod4_Forestry)
 
 Members of the K'avi tribe have managed a forest on their lands for decades. Recently, tribal forestry managers have started collecting data from a few different sites in the forest. They would like to set up a location for managing and harvesting Douglas firs for lumber. It is your job to analyze the data and determine which of the proposed sites would be the best for a harvest.
 
@@ -24,36 +24,20 @@ Below are short descriptions of the sites the K'avi managers have been collectin
 ## Data science topics covered:
 
 * Exploring the data 
-
 * Summary statistics
-
 * Choosing a site
-
 * Combining the data
-
 * Calculating statistics from the combined data
-
 * Creating a table 
-
 * Graphing
-
 * Recap
 
-## Learning goals for this module:
+## Learning goals:
 
-The goal of the first day of this module is to review what you have learned from the previous 3 modules and use that knowledge to answer questions about data more independently. More specifically:
-
-1. Min, max, median, mean review
-
-2. Exploring data sets
-
-3. Combining data sets
-
-4. Creating graphs
-
-5. Using quantitative and qualitative data to make decision about which site is the most productive
-
-6. Data visualization
+1. Evaluate both numeric trends and descriptive notes (quantitative and qualitative data) to form a holistic view of forest health
+2. Learn to design professional data visualizations with labels, legends, and customized colors to make ready to present to diverse audiences
+3. Apply data analysis and visualization to deliver clear, accessible recommendations to forest managers and community
+4. Discover where to find helpful online resources to continue exploring data and creating data visualizations independently in the future
 
 ## Notes for Instructors: 
 

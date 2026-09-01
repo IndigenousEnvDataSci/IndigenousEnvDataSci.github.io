@@ -19,24 +19,12 @@ The upstream source of Stream A is a groundwater spring. Water in this stream is
 -   grouping and summarizing data with `dplyr`
 -   data visualization with `ggplot` : scatter plots and time series, grouping by color 
 
-## Module goals:
-
-1. Explore water quality data of temperature and dissolved oxygen using methods learned in Module 1.
-
-2. Compare water quality across two different sites using statistics and data visualization 
-
-3. Consider how water quality data can help communities make decisions to protect culturally important species. Use all the analyses conducted (summary statistics, scatter plots, and time series plots) to make recommendations to the K’avi fisheries managers about which stream is a better bet for supporting healthy bull trout populations on tribal land. How does each analysis help you understand patterns in water quality? Which analysis was most useful?
-
-
 ## Learning goals: 
 
-1.  Students will review skills learned in Module 1, including loading and previewing data, descriptive statistics, and making scatter plots.
-
-2.  Students will learn to wrangle data into a “tidy” format that makes analysis and plotting easier.
-
-3.  Students will practice how to “debug” code, in other words, we’ll learn how to fix common problems that we see when using real world data.
-
-4.  Students will create graphs of data over time. These are called “time series” graphs.
+1. Apply foundational exploration and plotting skills from module 1 to a new environmental dataset, and learn why structured "tidy" data is easier to work with
+2. Practice troubleshooting errors and and dealing with missing information in real-world measurements
+3. Create "time-series" plots to track environmental changes over multiple years
+4. Explore how water quality data can help in decision making to protect culturally important species 
 
 
 ## Note for instructors: 
