@@ -18,7 +18,7 @@ These worksheets were created for students to follow along during a one day work
 - [Module 0: Download and Install R](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Worksheets/Module%200_%20Download%20%20and%20Install%20R.pdf) 
 - [Module 1:](./MOD1/mod1_intro.md) Monitoring fisheries for heavy metal contaminants 
     - [Student Worksheet](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Worksheets/Module%201_%20Monitoring%20Fisheries%20for%20Heavy%20Metal%20Contaminants.pdf)
-    - [Key for Student Worksheet](https://docs.google.com/document/d/1BJuyTysceg3bvHxI8b8ZyJ7Ns6GSJpTikM3_xE1pkz0/edit?usp=sharing) (work in progress)
+    - [Key for Student Worksheet](https://github.com/IndigenousEnvDataSci/EJ-DS/blob/main/Worksheets/KEY%20of%20Module%201_%20Mercury%20Levels%20in%20Fish.docx)
 
 ## More information 
 

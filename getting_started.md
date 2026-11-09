@@ -57,15 +57,21 @@ Now that R and RStudio are installed, open RStudio. The default window on the le
 To install the packages, copy and paste the following lines of code to the right of the \> in the Console, then press Enter. Note: You need to be connected to the internet to complete the package installation.
 
 ```         
-install.packages("tidyverse")
-install.packages("lubridate")
+install.packages("tidyverse") # used the most often for data wrangling, tidying, and visualizng
+install.packages("patchwork") # used with visualizing plots side by side
+install.packages("knitr") # used to change display settings of plots
+install.packages("viridis") # used with data visualization for color vision decificient - friendly color palettes
+install.packages("ggplot2") # used for data visualization 
 ```
 
 As you’re installing the packages, you might see a lot of red output messages. However, you can check that they downloaded successfully by then running the following scripts to load the packages:
 
 ```         
 library(tidyverse)
-library(lubridate)
+library(patchwork)
+library(knitr)
+library(viridis)
+library(ggplot2)
 ```
 
 To check if the packages have installed correctly, navigate over to the “Packages” tab in the bottom right window of RStudio and see if there is a checked box next to tidyverse, janitor, and lubridate. Note that different workshops may require different packages, and you can always run `install.packages()` and `library()` to get new ones.
