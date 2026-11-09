@@ -1,4 +1,4 @@
-# [Module 4: Forest management and communicating data](https://github.com/IndigenousEnvDataSci/EJ-DS/tree/main/Mod4_Forestry)
+# [Module 4: Visualizing forest growth for management](https://github.com/IndigenousEnvDataSci/EJ-DS/tree/main/Mod4_Forestry)
 
 Members of the K'avi tribe have managed a forest on their lands for decades. Recently, tribal forestry managers have started collecting data from a few different sites in the forest. They would like to set up a location for managing and harvesting Douglas firs for lumber. It is your job to analyze the data and determine which of the proposed sites would be the best for a harvest.
 
